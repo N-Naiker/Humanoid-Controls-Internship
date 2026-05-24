@@ -10,15 +10,15 @@ Video and Graphs Results can be found in the results folder
 
 ## Design Note
 The design and execution of this task was done using root cause analysis asking what, why, and how.
+What do I need to do? ---> Track robotic hand tracking circle in cartesian plane
 
-*What do I need to do? ---> Track robotic hand tracking circle in cartesian plane
 **What does this tell me I need?**
 - Simulation Software ---> Mujoco as it is more lightweight for implementation and allows easy access to various robotic arm simulations
-*Target Path ---> Calculate using math class. For this case I generated a circle pathway in the yz-plane using sin and cos
-*Implement sources of Uncertainty ---> Chose two to make challenge more interesting, state noise and lag
-*How to filter noise from signal ---> Kalman Filter as can help estimate desired position and is robust (effectively a low pass filter)
-*Solve Tracking Error ---> Implement a PD controller for tracking position and orientation of end effector (No Integrator as cause oscillarions in sims)
-*Implement RL agent to get optimal performance and achieve smooth motion
+- Target Path ---> Calculate using math class. For this case I generated a circle pathway in the yz-plane using sin and cos
+- Implement sources of Uncertainty ---> Chose two to make challenge more interesting, state noise and lag
+- How to filter noise from signal ---> Kalman Filter as can help estimate desired position and is robust (effectively a low pass filter)
+- Solve Tracking Error ---> Implement a PD controller for tracking position and orientation of end effector (No Integrator as cause oscillarions in sims)
+- Implement RL agent to get optimal performance and achieve smooth motion
       
 ### Architecture
 ```
